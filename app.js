@@ -31,7 +31,7 @@ function updatePrediction(event) {
 
   document.getElementById("hours").innerHTML = formatTime(minutes);
   document.getElementById("energy").textContent = `${energy.toFixed(1)} kWh`;
-  document.getElementById("cost").textContent = `$${cost.toFixed(2)}`;
+  document.getElementById("cost").textContent = `₹${(cost * 84).toFixed(2)}`;
   document.getElementById("summary-battery").textContent = `${battery} kWh`;
   document.getElementById("summary-range").textContent = `${current}% → ${target}%`;
   document.getElementById("summary-charger").innerHTML = `${charger.label} <small>${charger.power} kW</small>`;
