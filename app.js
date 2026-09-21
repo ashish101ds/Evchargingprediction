@@ -61,8 +61,14 @@ function runPrediction() {
 fields.forEach((id) => {
   const input = document.getElementById(id);
   const range = document.getElementById(`${id}-range`);
-  range.addEventListener("input", () => { input.value = range.value; updatePrediction(); });
-  input.addEventListener("input", () => { range.value = input.value; });
+  range.addEventListener("input", () => {
+    input.value = range.value;
+    updatePrediction();
+  });
+  input.addEventListener("input", () => {
+    range.value = input.value;
+    updatePrediction();
+  });
 });
 document.getElementById("prediction-form").addEventListener("submit", updatePrediction);
 document.getElementById("charger").addEventListener("change", updatePrediction);
@@ -74,3 +80,5 @@ document.querySelectorAll(".mobile-nav-item").forEach((item) => {
     item.classList.add("active");
   });
 });
+
+updatePrediction();
