@@ -42,6 +42,11 @@ function updatePrediction(event) {
       : "Charge during off-peak hours (11 PM – 6 AM) to save up to 35%. A slower AC session is gentler on the battery.";
 }
 
+function predictNow(event) {
+  updatePrediction(event);
+  document.getElementById("hours").closest(".result-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function runPrediction() {
   const button = document.querySelector(".mobile-predict");
   if (button) {
@@ -70,7 +75,7 @@ fields.forEach((id) => {
     updatePrediction();
   });
 });
-document.getElementById("prediction-form").addEventListener("submit", updatePrediction);
+document.getElementById("prediction-form").addEventListener("submit", predictNow);
 document.getElementById("charger").addEventListener("change", updatePrediction);
 document.querySelector(".mobile-predict").addEventListener("click", runPrediction);
 

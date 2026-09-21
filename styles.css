@@ -32,7 +32,7 @@
   .range-label{font-size:9px}
   .select-note{margin-top:7px}
   .primary-btn{min-height:48px;border-radius:11px;font-size:13px}
-  .input-panel .primary-btn{display:none}
+  .input-panel .primary-btn{display:flex;align-items:center;justify-content:center}
   .result-panel{margin-top:0}
   .result-top{align-items:flex-start}
   .confidence{font-size:9px;padding:6px 8px}
