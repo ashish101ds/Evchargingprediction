@@ -1,8 +1,8 @@
 const fields = ["battery", "current", "target", "temperature", "health"];
 const chargerData = {
-  home: { power: 7.2, label: "Home AC", rate: 0.91, cost: 0.24 },
-  fast: { power: 50, label: "Fast DC", rate: 0.93, cost: 0.42 },
-  ultra: { power: 150, label: "Ultra-fast DC", rate: 0.84, cost: 0.58 },
+  home: { power: 7.2, label: "Home AC", rate: 0.91, cost: 8 },
+  fast: { power: 50, label: "Fast DC", rate: 0.93, cost: 15 },
+  ultra: { power: 150, label: "Ultra-fast DC", rate: 0.84, cost: 25 },
 };
 
 function value(id) {
@@ -31,7 +31,7 @@ function updatePrediction(event) {
 
   document.getElementById("hours").innerHTML = formatTime(minutes);
   document.getElementById("energy").textContent = `${energy.toFixed(1)} kWh`;
-  document.getElementById("cost").textContent = `₹${(cost * 84).toFixed(2)}`;
+  document.getElementById("cost").textContent = `₹${cost.toFixed(2)}`;
   document.getElementById("summary-battery").textContent = `${battery} kWh`;
   document.getElementById("summary-range").textContent = `${current}% → ${target}%`;
   document.getElementById("summary-charger").innerHTML = `${charger.label} <small>${charger.power} kW</small>`;
