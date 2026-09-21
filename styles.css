@@ -16,7 +16,7 @@
   .avatar{width:38px;height:38px}
   .hero-grid{gap:12px}
   .hero-grid{display:flex;flex-direction:column}
-  .result-panel{order:-1}
+  .result-panel{order:initial}
   .panel{border-radius:18px;box-shadow:0 7px 24px #183d2d0b}
   .input-panel,.result-panel{padding:20px 17px}
   .panel-heading{margin-bottom:20px}
